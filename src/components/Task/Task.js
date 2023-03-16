@@ -1,14 +1,13 @@
-import React from "react";
-import { Text, View, SafeAreaView } from "react-native";
+import React, {useState} from "react";
+import { Text, View, SafeAreaView, TouchableOpacity } from "react-native";
 import styles from "./Task.style";
 
-function Task () {
+const Task =(props) =>{
+    
     return(    
-        <View style = {styles.container}>
-            <Text style= {styles.task}>Çöpler Atılacak.</Text>
-           
-        </View>
-        
+            <TouchableOpacity style = {styles.card} >
+            <Text style= {styles.text} >{props.text}</Text>
+            </TouchableOpacity >   
     );
 };
 

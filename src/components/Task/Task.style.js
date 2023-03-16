@@ -1,14 +1,27 @@
 import { StyleSheet } from "react-native";
 
 export default StyleSheet.create ({
-    container: {
+    card: {
       backgroundColor : '#61764B',
       borderRadius: 10,
       margin:10,
+
     },
-    task:{
+    task: {
         fontSize: 20,
         padding:10,
         color: 'white',
+    },
+    cardChange: {
+      backgroundColor :'gray',
+      borderRadius: 10,
+      margin:10,
+      
+    },
+    changeText:{
+      textDecorationLine:'line-through',
+      fontSize: 20,
+      padding:10,
+      color: 'white',
     },
 })

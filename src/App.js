@@ -1,16 +1,21 @@
-import React from "react";
-import { Text, View, SafeAreaView, StyleSheet } from "react-native";
+import React , {useState} from "react";
+import { Text, View, SafeAreaView, StyleSheet, FlatList } from "react-native";
 import Header from "./components/Header";
 import Task from "./components/Task";
 import Input from "./components/Input";
  
 function App () {
+const renderTask = ({item}) => (<Task text = {item}> </Task>)
+ const addlist = () => {
+  setlist ([...list,text])
+ }
+ const [text,setText] = useState ()
+ const [list,setlist] = useState ([])
   return(
     <View style ={styles.container}> 
     <Header></Header>
-    <Task></Task>
-    <Task></Task>
-    <Input></Input>
+    <FlatList data={list} renderItem={renderTask}/>
+    <Input setText={setText} addlist={addlist}></Input>
     </View>
   );
 }
