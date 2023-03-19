@@ -1,5 +1,5 @@
 import React , {useState} from "react";
-import { Text, View, SafeAreaView, StyleSheet, FlatList } from "react-native";
+import { Text, View, StyleSheet, FlatList } from "react-native";
 import Header from "./components/Header";
 import Task from "./components/Task";
 import Input from "./components/Input";
@@ -13,9 +13,9 @@ const renderTask = ({item}) => (<Task text = {item}> </Task>)
  const [list,setlist] = useState ([])
   return(
     <View style ={styles.container}> 
-    <Header></Header>
+    <Header setNumber ={list.length}></Header>
     <FlatList data={list} renderItem={renderTask}/>
-    <Input setText={setText} addlist={addlist}></Input>
+    <Input setText={setText} addlist={addlist} ></Input>
     </View>
   );
 }

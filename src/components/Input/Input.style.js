@@ -26,11 +26,12 @@ export default StyleSheet.create ({
         color:'white',
         marginLeft:10,
     },
-    saved:{
+    newSave:{
         backgroundColor :'orange',
         alignItems : 'center',
         borderRadius:10,
         padding:8,
         margin:15,
     },
+    
 }) 
