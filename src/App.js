@@ -15,7 +15,7 @@ const renderTask = ({item}) => (<Task text = {item}> </Task>)
     <View style ={styles.container}> 
     <Header setNumber ={list.length}></Header>
     <FlatList data={list} renderItem={renderTask}/>
-    <Input setText={setText} addlist={addlist} ></Input>
+    <Input setText={setText} addlist={addlist} text={text}></Input>
     </View>
   );
 }
